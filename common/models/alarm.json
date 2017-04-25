@@ -1,0 +1,37 @@
+{
+  "name": "Alarm",
+  "plural": "Alarms",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date"
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "alarmresponses": {
+      "type": "hasMany",
+      "model": "alarmresponse",
+      "foreignKey": ""
+    },
+    "mission": {
+      "type": "belongsTo",
+      "model": "Mission",
+      "foreignKey": ""
+    },
+    "persons": {
+      "type": "hasMany",
+      "model": "SARUser",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

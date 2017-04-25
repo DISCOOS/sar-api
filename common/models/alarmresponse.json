@@ -1,0 +1,40 @@
+{
+  "name": "Alarmresponse",
+  "plural": "Alarmresponses",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "response": {
+      "type": "boolean"
+    },
+    "date": {
+      "type": "date"
+    },
+    "comment": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "alarm": {
+      "type": "hasOne",
+      "model": "Alarm",
+      "foreignKey": ""
+    },
+    "sARUser": {
+      "type": "belongsTo",
+      "model": "SARUser",
+      "foreignKey": ""
+    },
+    "trackings": {
+      "type": "hasMany",
+      "model": "Tracking",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

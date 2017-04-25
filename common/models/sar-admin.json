@@ -1,0 +1,19 @@
+{
+  "name": "SARAdmin",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "missions": {
+      "type": "hasMany",
+      "model": "Mission",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

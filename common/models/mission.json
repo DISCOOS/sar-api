@@ -1,0 +1,41 @@
+{
+  "name": "Mission",
+  "plural": "Missions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "isActive": {
+      "type": "boolean"
+    },
+    "title": {
+      "type": "string"
+    },
+    "dateStart": {
+      "type": "date"
+    },
+    "dateEnd": {
+      "type": "date"
+    },
+    "meetingPoint": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "alarms": {
+      "type": "hasMany",
+      "model": "alarm",
+      "foreignKey": ""
+    },
+    "creator": {
+      "type": "belongsTo",
+      "model": "SARAdmin",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

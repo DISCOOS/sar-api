@@ -1,0 +1,27 @@
+{
+  "name": "Tracking",
+  "plural": "Trackings",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date"
+    },
+    "geopoint": {
+      "type": "geopoint"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "alarmresponse": {
+      "type": "belongsTo",
+      "model": "alarmresponse",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

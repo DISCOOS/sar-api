@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Mission": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Alarm": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Alarmresponse": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "SARUser": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Expence": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Tracking": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "SARAdmin": {
+    "dataSource": "mysql",
+    "public": true
+  }
+}

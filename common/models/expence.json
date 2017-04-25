@@ -1,0 +1,35 @@
+{
+  "name": "Expence",
+  "plural": "Expences",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "mission": {
+      "type": "belongsTo",
+      "model": "Mission",
+      "foreignKey": ""
+    },
+    "person": {
+      "type": "hasOne",
+      "model": "SARUser",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
