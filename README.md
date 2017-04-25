@@ -24,4 +24,4 @@ node .
 
 ## TODO
 - UMS integration (SOAP)
-- Specifiy access control for admin/user
+- Specifiy different access control for SAR-admin/SAR-user
