@@ -10,7 +10,13 @@
     "isActive": {
       "type": "boolean"
     },
+    "isEmergency": {
+      "type": "boolean"
+    },
     "title": {
+      "type": "string"
+    },
+    "description": {
       "type": "string"
     },
     "dateStart": {
