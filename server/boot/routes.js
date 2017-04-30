@@ -107,6 +107,41 @@ module.exports = function(app) {
 
 
 
+/**
+ * =================================
+ * 
+ * WORKAROUNDDDD
+ * 
+ * 
+ * =================================
+ */
+
+     // Append token to all SAR-users which is connected to KOVA
+    app.get("/api/sarusers", function(req, res, next) {
+
+        var cookie = req.cookies.access_token;
+        var connector = app.datasources.kova.connector;
+
+        if (!cookie) {
+            console.log("Error: Ingen token")
+                //res.status(401).send("Error: Not authorized")
+                //return;
+        }
+
+        // Hook into connector and append authorization-header
+        connector.observe('before execute', function(ctx, next) {
+            if (cookie) {
+                ctx.req.headers.Authorization = "Bearer " + cookie;
+            }
+
+            next();
+        });
+
+        next();
+    });
+
+
+
     // Get kova-persons
     app.get('/api/kova/persons', function(req, res) {
         var processResponse = (err, response) => {

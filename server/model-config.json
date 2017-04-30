@@ -49,7 +49,7 @@
     "public": true
   },
   "SARUser": {
-    "dataSource": "mysql",
+    "dataSource": "kova",
     "public": true
   },
   "Expence": {
