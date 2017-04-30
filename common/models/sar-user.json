@@ -16,6 +16,10 @@
     "organization": {
       "type": "string"
     },
+    "phone": {
+      "type": "number"
+    },
+
     "isAvailable": {
       "type": "boolean"
     },
