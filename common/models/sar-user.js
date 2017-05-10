@@ -8,7 +8,9 @@ module.exports = function (Saruser) {
 
 
 
-
+    /*========================================================================================/
+        DEFINE REMOTE METHODS
+    =========================================================================================*/
     Saruser.remoteMethod(
         'login',
         {
@@ -25,29 +27,64 @@ module.exports = function (Saruser) {
         'persons',
         {
             accepts: [
-                {arg: 'req', type: 'object', http: {source: 'req'}}
+                { arg: 'req', type: 'object', http: { source: 'req' } }
             ],
             http: { path: '/persons', verb: 'get' },
             returns: { arg: 'persons', type: 'Object' }
         });
 
+    Saruser.remoteMethod(
+        'getPersonByPK',
+        {
+            accepts: [
+                { arg: 'req', type: 'object', http: { source: 'req' } },
+                { arg: 'pk', type: 'string', required: true }
+            ],
+            http: { path: '/getPersonByPK', verb: 'get' },
+            returns: { arg: 'person', type: 'Object' }
+        });
 
-    Saruser.persons = function (req,cb) {
+
+
+    /*========================================================================================*/
+
+
+
+
+    Saruser.persons = function (req, cb) {
         // Get cookie from request...
         var cookieToken = req.cookies.access_token;
-        
+
         var kovaModel = app.models.kova;
         let processResponse = (err, response) => {
-              
-            console.log(err)
-            cb(null, response)
+
+            // Check if each person has app or not
+            if(!response) return;
+
+            var persons = response;
+            persons.forEach(
+                (p) => {
+                    let primKey = p.PrimKey;
+                    p.hasApp = false;
+
+                    // Check local saruser to see if exists
+                    Saruser.findOne({ where: { kovaId: primKey } })
+                        .then(function (result) {
+                            p.hasApp = (result) ? true : false;
+                        })
+                }
+            )
+
+
+            setTimeout(function () {
+                cb(null, persons)
+            }, 1000);
+
         }
         // Call KOVA, pass in cookie
-        kovaModel.persons(cookieToken,processResponse);
-
-
-
+        kovaModel.persons(cookieToken, processResponse);
     }
+
 
 
     /**
@@ -84,6 +121,7 @@ module.exports = function (Saruser) {
 
                 // Set priveleges
                 isAdmin = response.user.privileges & 256 == 256;
+                
 
                 console.log("----- kova response = 200 -------")
                 console.log("isAdmin: " + isAdmin)
@@ -146,10 +184,10 @@ module.exports = function (Saruser) {
                 //   return res.redirect('/');
             }
         }
-        
+
         return next();
     });
 
- 
+
 
 }
