@@ -39,9 +39,9 @@
       "model": "alarm",
       "foreignKey": ""
     },
-    "creator": {
+    "sARUser": {
       "type": "belongsTo",
-      "model": "SARAdmin",
+      "model": "SARUser",
       "foreignKey": ""
     }
   },

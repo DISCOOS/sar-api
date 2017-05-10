@@ -59,7 +59,7 @@ module.exports = function (Saruser) {
         let processResponse = (err, response) => {
 
             // Check if each person has app or not
-            if(!response) return;
+            if (!response) return;
 
             var persons = response;
             persons.forEach(
@@ -95,7 +95,9 @@ module.exports = function (Saruser) {
      *      2. If user exists in KOVA (200 response), then grab primarykey and check if the user exists locally in sar-status database. 
      *           2.1. If user exists locally, means that they have used sar-status before. Send 200 response with user-data + token
      *           2.2. If user does not exist, we have to create a new user with PK from KOVA. Send 200 response with user-data + token afterwards
+     *  
      * 
+     * TODO: This function is way to big and coupled
      * 
      */
     Saruser.login = function (username, password, cb) {
@@ -121,12 +123,14 @@ module.exports = function (Saruser) {
 
                 // Set priveleges
                 isAdmin = response.user.privileges & 256 == 256;
-                
+
 
                 console.log("----- kova response = 200 -------")
                 console.log("isAdmin: " + isAdmin)
                 console.log("---------PRIMARY KEY-------")
                 console.log(pk)
+
+                let sar_user;
 
                 // So we need to check if user exists locally
                 Saruser.findOne({ where: { kovaId: pk } }, function (err, user) {
@@ -137,16 +141,31 @@ module.exports = function (Saruser) {
                     // Doesnt exist, make a new instance
                     if (!user) {
                         console.log("----- user dont exsist, created user----")
-                        Saruser.create({ kovaId: pk, isAvailable: true, isTrackable: false, isAdmin: isAdmin })
+                        Saruser.create({ kovaId: pk, isAvailable: true, isTrackable: false, isAdmin: isAdmin }, function (err, res) {
+                            if (res) sar_user = res;
+                        })
                         // User exist
                     } else {
-                        console.log("--- user exsists----")
+                        sar_user = user;
+
+
                     }
 
 
                 });
 
-                cb(null, response)
+
+
+                setTimeout(function () {
+                    // Mapping responses from KOVA to SAR
+                    let newResponse = response;
+                    newResponse.user.id = sar_user.id;
+                    newResponse.user.isAvailable = sar_user.isAvailable;
+                    newResponse.user.isTrackable = sar_user.isTrackable;
+                    cb(null, newResponse)
+                }, 1500);
+
+
 
             }
 
