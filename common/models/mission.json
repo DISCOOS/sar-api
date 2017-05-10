@@ -26,6 +26,9 @@
       "type": "date"
     },
     "meetingPoint": {
+      "type": "geopoint"
+    },
+    "meetingPointNicename": {
       "type": "string"
     }
   },

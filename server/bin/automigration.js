@@ -29,15 +29,10 @@ dataSource.automigrate('Mission', function(err) {
 	dataSource.disconnect();
 });
 
-dataSource.automigrate('SARAdmin', function(err) {
+dataSource.automigrate('SARUser', function(err) {
 	if(err) throw err;
 	dataSource.disconnect();
 });
-
-// dataSource.automigrate('SARUser', function(err) {
-// 	if(err) throw err;
-// 	dataSource.disconnect();
-// });
 
 dataSource.automigrate('Tracking', function(err) {
 	if(err) throw err;

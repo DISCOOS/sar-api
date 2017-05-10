@@ -6,29 +6,27 @@
     "validateUpsert": true
   },
   "properties": {
-    "email": {
-      "type": "string",
-      "default": "name"
-    },
-    "name": {
+    "kovaId": {
       "type": "string"
     },
-    "organization": {
-      "type": "string"
-    },
-    "phone": {
-      "type": "number"
-    },
-
     "isAvailable": {
       "type": "boolean"
     },
     "isTrackable": {
       "type": "boolean"
+    },
+    "isAdmin": {
+      "type": "boolean"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "missions": {
+      "type": "hasMany",
+      "model": "Mission",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

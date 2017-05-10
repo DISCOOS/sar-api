@@ -33,10 +33,24 @@
         "template": {
           "method": "GET",
           "url": "http://api.kova.no/api/persons",
-          "headers": {}
+          "headers": {
+            "Authorization": "Bearer {token}"
+          }
         },
         "functions": {
-          "find": []
+          "persons": ["token"]
+        }
+      },
+      {
+        "template": {
+          "method": "GET",
+          "url": "http://api.kova.no/api/persons/{pk}",
+          "headers": {
+            "Authorization": "Bearer {token}"
+          }
+        },
+        "functions": {
+          "getPersonByPK": ["pk", "token"]
         }
       }
     ]

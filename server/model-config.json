@@ -48,10 +48,6 @@
     "dataSource": "mysql",
     "public": true
   },
-  "SARUser": {
-    "dataSource": "kova",
-    "public": true
-  },
   "Expence": {
     "dataSource": "mysql",
     "public": true
@@ -60,8 +56,12 @@
     "dataSource": "mysql",
     "public": true
   },
-  "SARAdmin": {
+  "SARUser": {
     "dataSource": "mysql",
+    "public": true
+  },
+  "kova": {
+    "dataSource": "kova",
     "public": true
   }
 }
