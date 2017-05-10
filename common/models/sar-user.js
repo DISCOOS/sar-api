@@ -139,8 +139,8 @@ module.exports = function (Saruser) {
                     remoteMethodOutput.user.access_token, {
                         signed: false, // VIRKER BARE MED FALSE?
                         // signed: req.signedCookies ? true : false, // Can detect if client has modified cookie   
-                        maxAge: 10000 * remoteMethodOutput.user.expires_in
-                        //httpOnly: false, // Cookie cant be read by client-side javascript
+                        maxAge: 10000 * remoteMethodOutput.user.expires_in,
+                        httpOnly: true, // Cookie cant be read by client-side javascript
                         //secure: false  // Cookie cant be read by non-ssl connection
                     });
                 //   return res.redirect('/');
