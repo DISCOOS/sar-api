@@ -42,7 +42,7 @@
     "sARUser": {
       "type": "belongsTo",
       "model": "SARUser",
-      "foreignKey": ""
+      "foreignKey": "creator"
     }
   },
   "acls": [],

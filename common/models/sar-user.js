@@ -34,15 +34,18 @@ module.exports = function (Saruser) {
         });
 
     Saruser.remoteMethod(
-        'getPersonByPK',
+        'findByIdMerge',
         {
             accepts: [
                 { arg: 'req', type: 'object', http: { source: 'req' } },
-                { arg: 'pk', type: 'string', required: true }
+                { arg: 'id', type: 'number', required: true }
             ],
-            http: { path: '/getPersonByPK', verb: 'get' },
-            returns: { arg: 'person', type: 'Object' }
+            http: { path: '/findByIdMerge/:id', verb: 'get' },
+            returns: { arg: 'user', type: 'Object' }
         });
+
+
+
 
 
 
@@ -50,6 +53,51 @@ module.exports = function (Saruser) {
 
 
 
+
+    // Override findById to return kova info as well
+    Saruser.findByIdMerge = function (req, id, cb) {
+
+        // Get cookie from request...
+        var cookieToken = req.cookies.access_token;
+        //console.log(cookieToken)
+
+        var kovaId;
+        var sarResults;
+
+
+        // Call local findById
+        Saruser.findById(id)
+            .then(function (result) {
+                sarResults = result;
+            })
+
+
+
+        var kovaModel = app.models.kova;
+
+        let processResponse = (err, response) => {
+            console.log(response)
+            setTimeout(function () {
+                // Mapping responses from KOVA to SAR
+
+                sarResults.name = response.Name;
+                sarResults.email = response.Email;
+                sarResults.phone = response.PhoneMobile;
+
+                cb(null, sarResults)
+            }, 1500);
+
+        }
+
+        setTimeout(function () {
+            console.log(kovaId)
+            kovaModel.getPersonByPK(sarResults.kovaId, cookieToken, processResponse);
+        }, 500);
+
+
+
+
+    }
 
     Saruser.persons = function (req, cb) {
         // Get cookie from request...
@@ -141,22 +189,28 @@ module.exports = function (Saruser) {
                     // Doesnt exist, make a new instance
                     if (!user) {
                         console.log("----- user dont exsist, created user----")
-                        Saruser.create({ kovaId: pk, isAvailable: true, isTrackable: false, isAdmin: isAdmin }, function (err, res) {
-                            if (res) sar_user = res;
-                        })
+                        Saruser.create(
+                            {
+                                kovaId: pk,
+                                isAvailable: true,
+                                isTrackable: false,
+                                isAdmin: isAdmin,
+                                name: response.user.name,
+                                email: response.user.email
+                            },
+                            function (err, res) {
+                                if (res) sar_user = res;
+                            })
                         // User exist
                     } else {
                         sar_user = user;
-
-
                     }
-
-
                 });
 
 
 
                 setTimeout(function () {
+                    console.log(sar_user)
                     // Mapping responses from KOVA to SAR
                     let newResponse = response;
                     newResponse.user.id = sar_user.id;

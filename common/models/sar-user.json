@@ -9,6 +9,15 @@
     "kovaId": {
       "type": "string"
     },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "number"
+    },
     "isAvailable": {
       "type": "boolean"
     },
@@ -24,7 +33,7 @@
     "missions": {
       "type": "hasMany",
       "model": "Mission",
-      "foreignKey": ""
+      "foreignKey": "creator"
     }
   },
   "acls": [],
