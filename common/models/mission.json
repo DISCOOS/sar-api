@@ -36,7 +36,7 @@
   "relations": {
     "alarms": {
       "type": "hasMany",
-      "model": "alarm",
+      "model": "Alarm",
       "foreignKey": ""
     },
     "sARUser": {

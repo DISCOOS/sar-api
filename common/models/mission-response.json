@@ -1,6 +1,6 @@
 {
-  "name": "Alarmresponse",
-  "plural": "Alarmresponses",
+  "name": "MissionResponse",
+  "plural": "MissionResponses",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -19,9 +19,9 @@
   },
   "validations": [],
   "relations": {
-    "alarm": {
-      "type": "hasOne",
-      "model": "Alarm",
+    "mission": {
+      "type": "belongsTo",
+      "model": "Mission",
       "foreignKey": ""
     },
     "sARUser": {

@@ -118,6 +118,12 @@ module.exports = function (Saruser) {
                     // Check local saruser to see if exists
                     Saruser.findOne({ where: { kovaId: primKey } })
                         .then(function (result) {
+                            if(result) {
+                                p.hasApp = true;
+                                p.id = result.id
+                            } else {
+                                p.hasApp = false;
+                            }
                             p.hasApp = (result) ? true : false;
                         })
                 }

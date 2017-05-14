@@ -34,6 +34,12 @@
       "type": "hasMany",
       "model": "Mission",
       "foreignKey": "creator"
+    },
+    "alarms": {
+      "type": "hasMany",
+      "model": "Alarm",
+      "foreignKey": "alarmId",
+      "through": "AlarmUser"
     }
   },
   "acls": [],

@@ -29,9 +29,11 @@
     "persons": {
       "type": "hasMany",
       "model": "SARUser",
-      "foreignKey": ""
+      "foreignKey": "alarmId",
+      "through": "AlarmUser"
     }
   },
   "acls": [],
   "methods": {}
 }
+

@@ -14,7 +14,7 @@ dataSource.automigrate('Alarm', function(err) {
 });
 
 
-dataSource.automigrate('Alarmresponse', function(err) {
+dataSource.automigrate('MissionResponse', function(err) {
 	if(err) throw err;
 	dataSource.disconnect();
 });
@@ -35,6 +35,11 @@ dataSource.automigrate('SARUser', function(err) {
 });
 
 dataSource.automigrate('Tracking', function(err) {
+	if(err) throw err;
+	dataSource.disconnect();
+});
+
+dataSource.automigrate('AlarmUser', function(err) {
 	if(err) throw err;
 	dataSource.disconnect();
 });

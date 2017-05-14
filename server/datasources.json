@@ -38,7 +38,9 @@
           }
         },
         "functions": {
-          "persons": ["token"]
+          "persons": [
+            "token"
+          ]
         }
       },
       {
@@ -50,7 +52,10 @@
           }
         },
         "functions": {
-          "getPersonByPK": ["pk", "token"]
+          "getPersonByPK": [
+            "pk",
+            "token"
+          ]
         }
       }
     ]

@@ -44,7 +44,7 @@
     "dataSource": "mysql",
     "public": true
   },
-  "Alarmresponse": {
+  "MissionResponse": {
     "dataSource": "mysql",
     "public": true
   },
@@ -62,6 +62,10 @@
   },
   "kova": {
     "dataSource": "kova",
+    "public": true
+  },
+  "AlarmUser": {
+    "dataSource": "mysql",
     "public": true
   }
 }
