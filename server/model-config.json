@@ -62,7 +62,7 @@
   },
   "kova": {
     "dataSource": "kova",
-    "public": true
+    "public": false
   },
   "AlarmUser": {
     "dataSource": "mysql",
