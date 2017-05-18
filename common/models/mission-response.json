@@ -24,7 +24,7 @@
       "model": "Mission",
       "foreignKey": ""
     },
-    "sARUser": {
+    "saruser": {
       "type": "belongsTo",
       "model": "SARUser",
       "foreignKey": ""

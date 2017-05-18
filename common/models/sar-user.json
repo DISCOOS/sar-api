@@ -28,6 +28,7 @@
       "type": "boolean"
     }
   },
+  "hidden": ["kovaId"],
   "validations": [],
   "relations": {
     "missions": {

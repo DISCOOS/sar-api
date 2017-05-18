@@ -43,6 +43,11 @@
       "type": "belongsTo",
       "model": "SARUser",
       "foreignKey": "creator"
+    },
+    "missionresponses": {
+      "type": "hasMany",
+      "model" : "MissionResponse",
+      "foreignKey" : ""
     }
   },
   "acls": [],
