@@ -39,8 +39,8 @@ module.exports = function (Saruser) {
 
     /*========================================================================================*/
 
-    
-    
+
+
     /**
      * Gets list of persons from KOVA and map som SAR-data to each person if found
      */
@@ -118,8 +118,8 @@ module.exports = function (Saruser) {
 
             })
             .catch((err) => {
-                // error with kova login
-                return cb(null, err)
+                // error with kova login, send 401 response
+                return cb({ statusCode: 401, message: "Wrong username / password" }, null);
             })
     };
 
