@@ -1,6 +1,6 @@
 module.exports = function (app) {
 
-
+/*
 const bearerTokenValidation = require('express-accesstoken-validation');
 
 
@@ -12,7 +12,7 @@ let options = {
 }
 
 app.use(bearerTokenValidation(options));
-
+*/
 };
 
 
