@@ -11,3 +11,4 @@ module.exports = function enableAuthentication(server) {
   currentUserLiteral: 'me'
 }));
 };
+

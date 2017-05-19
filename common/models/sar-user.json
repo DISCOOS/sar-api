@@ -5,6 +5,9 @@
   "options": {
     "validateUpsert": true
   },
+  "hidden": [
+    "kovaId"
+  ],
   "properties": {
     "kovaId": {
       "type": "string"
@@ -28,7 +31,6 @@
       "type": "boolean"
     }
   },
-  "hidden": ["kovaId"],
   "validations": [],
   "relations": {
     "missions": {

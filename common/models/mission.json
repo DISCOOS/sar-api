@@ -46,8 +46,8 @@
     },
     "missionresponses": {
       "type": "hasMany",
-      "model" : "MissionResponse",
-      "foreignKey" : ""
+      "model": "MissionResponse",
+      "foreignKey": ""
     }
   },
   "acls": [],

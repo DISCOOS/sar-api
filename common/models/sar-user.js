@@ -3,11 +3,14 @@
 var app = require('../../server/server');
 
 // Need this for async-handling
-var async = require('async');
+var async = require('async').forEach;
+
+var disableAllMethods = require('../../server/bin/helpers.js').disableAllMethods;
 
 module.exports = function (Saruser) {
 
-
+    // Disable all remote-methods we dont need. Pass in array of whitelisted methods.
+    // disableAllMethods(Saruser, ['findOne', 'create']);
 
     /*========================================================================================/
         DEFINE REMOTE METHODS
@@ -36,10 +39,7 @@ module.exports = function (Saruser) {
 
 
 
-
     /*========================================================================================*/
-
-
 
     /**
      * Gets list of persons from KOVA and map som SAR-data to each person if found
@@ -67,7 +67,7 @@ module.exports = function (Saruser) {
                 })
             })
             .catch((err) => {
-                cb(null, err)
+                cb(err, null)
             })
     }
 
@@ -112,12 +112,13 @@ module.exports = function (Saruser) {
                             })
                             .catch((err) => {
                                 // error creating sar-user
-                                cb(null, err)
+                                cb(err, null)
                             })
                     })
 
             })
             .catch((err) => {
+                // console.log(err)
                 // error with kova login, send 401 response
                 return cb({ statusCode: 401, message: "Wrong username / password" }, null);
             })
@@ -148,8 +149,9 @@ module.exports = function (Saruser) {
                 //secure: false  // Cookie cant be read by non-ssl connection
             });
 
-        // We dont need to send KOVA accesstoken in response body now that user is verified.
-        delete remoteMethodOutput.user.access_token;
+
+       
+        //delete remoteMethodOutput.user.access_token;
 
         return next();
     });
