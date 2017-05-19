@@ -43,6 +43,11 @@
       "model": "Alarm",
       "foreignKey": "alarmId",
       "through": "AlarmUser"
+    },
+    "expences": {
+      "type": "hasMany",
+      "model": "Expence",
+      "foreignKey": ""
     }
   },
   "acls": [],
