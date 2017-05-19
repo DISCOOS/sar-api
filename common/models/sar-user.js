@@ -3,7 +3,7 @@
 var app = require('../../server/server');
 
 // Need this for async-handling
-var async = require('async').forEach;
+var async = require('async');
 
 var disableAllMethods = require('../../server/bin/helpers.js').disableAllMethods;
 
