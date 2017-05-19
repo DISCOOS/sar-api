@@ -8,7 +8,7 @@ const bearerTokenValidation = require('express-accesstoken-validation');
 let options = {
   validationUri: 'http://api.kova.no/api/values',
   tokenParam: 'token',
-  unprotected: ['/api/SarUsers/login','/api/sarusers/login']
+  unprotected: ['/api/SarUsers/login','/api/sarusers/login', '/api/SARUsers/login']
 }
 
 app.use(bearerTokenValidation(options));
