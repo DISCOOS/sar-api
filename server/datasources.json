@@ -1,8 +1,4 @@
 {
-  "db": {
-    "name": "db",
-    "connector": "memory"
-  },
   "kova": {
     "name": "kova",
     "baseURL": "http://api.kova.no/api",
