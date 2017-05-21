@@ -9,7 +9,12 @@ let options = {
   unprotected: ['/api/SarUsers/login','/api/sarusers/login', '/api/SARUsers/login']
 }
 
+
+// Only use token validation for production
+if(process.env.NODE_ENV == 'production') {
 app.use(bearerTokenValidation(options));
+}
+
 
 };
 
