@@ -5,6 +5,6 @@
     "enabled": true,
     "raiseError": false,
     "migration": "auto-migrate",
-    "models": ["Mission", "Alarm", "MissionResponse"]
+    "models": ""
   }
 }
