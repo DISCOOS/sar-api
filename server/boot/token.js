@@ -22,6 +22,7 @@ let options = {
 if(process.env.NODE_ENV == 'production') {
     console.log("production")
     app.use(bearerTokenValidation(options));
+    console.log(bearerTokenValidation)
 } else {
     console.log("not production")
 }
