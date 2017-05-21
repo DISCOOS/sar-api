@@ -6,7 +6,7 @@ var morgan  = require('morgan')
 //This tells express to log via morgan
 //and morgan to log in the "combined" pre-defined format
 app.use(morgan('combined'))
-console.log("------test123-------")
+
 
 const bearerTokenValidation = require('express-accesstoken-validation');
 
@@ -19,8 +19,13 @@ let options = {
 
 
 // Only use token validation for production
-if(process.env.NODE_ENV == 'production')
-app.use(bearerTokenValidation(options));
+if(process.env.NODE_ENV == 'production') {
+    console.log("production")
+    app.use(bearerTokenValidation(options));
+} else {
+    console.log("not production")
+}
+
 
 };
 
