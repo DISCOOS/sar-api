@@ -5,6 +5,14 @@
     "enabled": true,
     "raiseError": false,
     "migration": "auto-migrate",
-    "models": ""
+    "models": [
+      "Mission",
+      "Alarm",
+      "MissionResponse",
+      "Expence",
+      "Tracking",
+      "SARUser",
+      "AlarmUser"
+    ]
   }
 }
