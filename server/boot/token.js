@@ -1,10 +1,6 @@
 module.exports = function (app) {
 
-/*
-
-
 const bearerTokenValidation = require('express-accesstoken-validation');
-
 
 // Authorization through KOVA
 let options = {
@@ -14,8 +10,6 @@ let options = {
 }
 
 app.use(bearerTokenValidation(options));
-
-*/
 
 };
 
