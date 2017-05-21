@@ -4,6 +4,7 @@
   "loopback-component-auto-migrate": {
     "enabled": true,
     "raiseError": false,
-    "migration": "auto-migrate"
+    "migration": "auto-migrate",
+    "models": ["Mission", "Alarm", "MissionResponse"]
   }
 }
