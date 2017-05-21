@@ -13,7 +13,7 @@ let options = {
 // Only use token validation for production
 if(process.env.NODE_ENV == 'production') {
     console.log("Production server started, token-validation required")
-//app.use(bearerTokenValidation(options));
+app.use(bearerTokenValidation(options));
 }
 
 
