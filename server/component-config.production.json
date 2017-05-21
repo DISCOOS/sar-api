@@ -12,7 +12,12 @@
       "Expence",
       "Tracking",
       "SARUser",
-      "AlarmUser"
+      "AlarmUser",
+      "User",
+      "AccessToken",
+      "ACL",
+      "RoleMapping",
+      "Role"
     ]
   }
 }
