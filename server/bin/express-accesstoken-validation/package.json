@@ -1,0 +1,106 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "express-accesstoken-validation",
+        "scope": null,
+        "escapedName": "express-accesstoken-validation",
+        "name": "express-accesstoken-validation",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/stian/Documents/DAT190/SAR-Status/API/sar"
+    ]
+  ],
+  "_from": "express-accesstoken-validation@latest",
+  "_id": "express-accesstoken-validation@0.3.0",
+  "_inCache": true,
+  "_location": "/express-accesstoken-validation",
+  "_nodeVersion": "4.2.3",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/express-accesstoken-validation-0.3.0.tgz_1476979308756_0.5013554680626839"
+  },
+  "_npmUser": {
+    "name": "pdmlab",
+    "email": "info@pdmlab.com"
+  },
+  "_npmVersion": "3.10.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "express-accesstoken-validation",
+    "scope": null,
+    "escapedName": "express-accesstoken-validation",
+    "name": "express-accesstoken-validation",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/express-accesstoken-validation/-/express-accesstoken-validation-0.3.0.tgz",
+  "_shasum": "fa7c4309e119bbadd8bdc7c9f066fd7fb976837f",
+  "_shrinkwrap": null,
+  "_spec": "express-accesstoken-validation",
+  "_where": "/Users/stian/Documents/DAT190/SAR-Status/API/sar",
+  "author": {
+    "name": "Alexander Zeitler",
+    "email": "alexander.zeitler@pdmlab.com"
+  },
+  "bugs": {
+    "url": "https://github.com/PDMLab/express-accesstoken-validation/issues"
+  },
+  "dependencies": {
+    "lodash": "^4.6.1",
+    "request": "^2.69.0",
+    "url-join": "0.0.1"
+  },
+  "description": "ExpressJS middleware for remote access token validation",
+  "devDependencies": {
+    "express": "^4.13.4",
+    "mocha": "^2.4.5"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "fa7c4309e119bbadd8bdc7c9f066fd7fb976837f",
+    "tarball": "https://registry.npmjs.org/express-accesstoken-validation/-/express-accesstoken-validation-0.3.0.tgz"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "gitHead": "0b80c55eec0c141e2fb5ca9a821a2e06a1c7694f",
+  "homepage": "https://github.com/PDMLab/express-accesstoken-validation#readme",
+  "keywords": [
+    "express",
+    "expressjs",
+    "accesstoken",
+    "token",
+    "validation",
+    "oauth2-server",
+    "oauth2",
+    "client",
+    "bearer"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "pdmlab",
+      "email": "info@pdmlab.com"
+    }
+  ],
+  "name": "express-accesstoken-validation",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PDMLab/express-accesstoken-validation.git"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test/test.js"
+  },
+  "version": "0.3.0"
+}
