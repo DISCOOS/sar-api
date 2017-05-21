@@ -1,10 +1,8 @@
 module.exports = function (app) {
 
-if(process.env.MY_CUSTOM_VAR) {
-    console.log(process.env.MY_CUSTOM_VAR)
-} else {
-    console.log("not set")
-}
+/*
+
+
 const bearerTokenValidation = require('express-accesstoken-validation');
 
 
@@ -16,6 +14,8 @@ let options = {
 }
 
 app.use(bearerTokenValidation(options));
+
+*/
 
 };
 

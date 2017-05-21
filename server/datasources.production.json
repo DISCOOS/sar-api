@@ -57,7 +57,7 @@
     ]
   },
   "mysql": {
-    "host": "localhost",
+    "host": process.env.MYSQL_HOST,
     "port": 8889,
     "url": "",
     "database": "sar",
