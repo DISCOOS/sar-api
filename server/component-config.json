@@ -4,5 +4,10 @@
   },
   "loopback-component-model-diagram": {
     "mountPath": "/uml"
+  },
+    "loopback-component-auto-migrate": {
+    "enabled": true,
+    "raiseError": false,
+    "migration": "auto-migrate"
   }
 }
