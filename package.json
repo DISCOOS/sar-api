@@ -27,13 +27,17 @@
     "loopback-component-passport": "^3.2.0",
     "loopback-connector-mysql": "^2.4.1",
     "loopback-connector-rest": "^2.1.0",
+    "mocha": "^3.4.1",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
-    "nsp": "^2.1.0"
+    "mocha": "^3.4.1",
+    "nsp": "^2.1.0",
+    "should": "^11.2.1",
+    "supertest": "^3.0.0"
   },
   "repository": {
     "type": "",

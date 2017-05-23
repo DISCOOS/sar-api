@@ -5,9 +5,23 @@
   "loopback-component-model-diagram": {
     "mountPath": "/uml"
   },
-    "loopback-component-auto-migrate": {
+  "loopback-component-auto-migrate": {
     "enabled": true,
     "raiseError": false,
-    "migration": "auto-migrate"
+    "migration": "auto-migrate",
+    "models": [
+      "Mission",
+      "Alarm",
+      "MissionResponse",
+      "Expence",
+      "Tracking",
+      "SARUser",
+      "AlarmUser",
+      "User",
+      "AccessToken",
+      "ACL",
+      "RoleMapping",
+      "Role"
+    ]
   }
 }

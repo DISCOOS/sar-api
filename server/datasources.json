@@ -1,4 +1,8 @@
 {
+  "memory": {
+    "name": "memory",
+    "connector": "memory"
+  },
   "kova": {
     "name": "kova",
     "baseURL": "http://api.kova.no/api",
@@ -55,5 +59,15 @@
         }
       }
     ]
+  },
+  "mysql": {
+    "host": "localhost",
+    "database": "sar",
+    "port": 8889,
+    "user": "root",
+    "password": "root",
+    "url": "",
+    "name": "mysql",
+    "connector": "mysql"
   }
 }

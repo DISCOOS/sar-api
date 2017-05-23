@@ -118,7 +118,7 @@ module.exports = function (Saruser) {
 
             })
             .catch((err) => {
-                // console.log(err)
+                //console.log(err)
                 // error with kova login, send 401 response
                 return cb({ statusCode: 401, message: "Wrong username / password" }, null);
             })
