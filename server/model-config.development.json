@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "memory",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "memory",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "memory",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "memory",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "memory",
+    "public": false
+  },
+  "Mission": {
+    "dataSource": "memory",
+    "public": true
+  },
+  "Alarm": {
+    "dataSource": "memory",
+    "public": true
+  },
+  "MissionResponse": {
+    "dataSource": "memory",
+    "public": true
+  },
+  "Expence": {
+    "dataSource": "memory",
+    "public": true
+  },
+  "Tracking": {
+    "dataSource": "memory",
+    "public": true
+  },
+  "SARUser": {
+    "dataSource": "memory",
+    "public": true
+  },
+  "kova": {
+    "dataSource": "kova",
+    "public": false
+  },
+  "AlarmUser": {
+    "dataSource": "memory",
+    "public": true
+  }
+}
