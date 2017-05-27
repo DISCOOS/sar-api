@@ -36,7 +36,7 @@
     }
   },
   "session": {
-    "express-session": {
+    "cookie-session": {
       "params": {
         "secret": "other test secret",
         "saveUninitialized": true,
