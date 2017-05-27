@@ -20,12 +20,12 @@
   "validations": [],
   "relations": {
     "mission": {
-      "type": "hasOne",
+      "type": "belongsTo",
       "model": "Mission",
       "foreignKey": ""
     },
     "saruser": {
-      "type": "belongsTo",
+      "type": "hasOne",
       "model": "SARUser",
       "foreignKey": ""
     }
