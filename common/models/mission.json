@@ -48,6 +48,11 @@
       "type": "hasMany",
       "model": "MissionResponse",
       "foreignKey": ""
+    },
+    "expenses" : {
+      "type": "hasMany",
+      "model": "Expence",
+      "foreignKey": ""
     }
   },
   "acls": [],
