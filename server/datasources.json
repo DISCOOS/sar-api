@@ -59,15 +59,5 @@
         }
       }
     ]
-  },
-  "mysql": {
-    "host": "localhost",
-    "database": "sar",
-    "port": 8889,
-    "user": "root",
-    "password": "root",
-    "url": "",
-    "name": "mysql",
-    "connector": "mysql"
   }
 }
