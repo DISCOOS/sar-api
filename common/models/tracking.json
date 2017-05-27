@@ -18,7 +18,7 @@
   "relations": {
     "alarmresponse": {
       "type": "belongsTo",
-      "model": "alarmresponse",
+      "model": "MissionReponse",
       "foreignKey": ""
     }
   },

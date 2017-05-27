@@ -5,16 +5,21 @@ var app = require('../../server/server');
 // Need this for async-handling
 var async = require('async');
 
-var disableAllMethods = require('../../server/bin/helpers.js').disableAllMethods;
 
 module.exports = function (Saruser) {
 
-    // Disable all remote-methods we dont need. Pass in array of whitelisted methods.
-    // disableAllMethods(Saruser, ['findOne', 'create']);
+    Saruser.disableRemoteMethodByName('create', true);				// Removes (POST) /Sarusers
+    Saruser.disableRemoteMethodByName('upsert', true);				// Removes (PUT) /Sarusers
+    Saruser.disableRemoteMethodByName('deleteById', true);			// Removes (DELETE) /Sarusers/:id
+    Saruser.disableRemoteMethodByName("updateAll", true);				// Removes (POST) /Sarusers/update
+    Saruser.disableRemoteMethodByName("updateAttributes", false);		// Removes (PUT) /Sarusers/:id
+    Saruser.disableRemoteMethodByName('createChangeStream', true);
+
 
     /*========================================================================================/
         DEFINE REMOTE METHODS
     =========================================================================================*/
+
     Saruser.remoteMethod(
         'login',
         {
@@ -150,7 +155,7 @@ module.exports = function (Saruser) {
             });
 
 
-       
+
         //delete remoteMethodOutput.user.access_token;
 
         return next();

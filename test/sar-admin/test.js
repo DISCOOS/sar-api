@@ -23,46 +23,43 @@ describe('/SAR-Admin test suite', function () {
 
         it('Should login as test admin user with token in reponse', (done) => {
             api.post(userUrl + '/login')
-              .type('form')
+                .type('form')
                 .send({ username: "demo@kova.no", password: "demo" })
                 .expect(200)
                 .end((err, res) => {
-                    console.log("ERROR " + err)
-                    console.log(JSON.stringify(res, null, 4))
+
                     if (err) return done(err);
-                    
-                    token = res.text.user.access_token;
-                    console.log(token)
+
+                    token = res.body.user.access_token;
                     done();
                 });
         });
-        /*
-                it('Should be allowed to create a new mission after login', (done) => {
-                    api.post('/api/missions')
-                        .query({ access_token: token })
-                        .send({
-                            "isActive": true,
-                            "isEmergency": true,
-                            "title": "string",
-                            "description": "string",
-                            "dateStart": "2017-05-21T20:25:00.657Z",
-                            "dateEnd": "2017-05-21T20:25:00.657Z",
-                            "meetingPoint": {
-                                "lat": 0,
-                                "lng": 0
-                            },
-                            "meetingPointNicename": "string",
-                            "id": 0,
-                            "creator": 0
-                        })
-                        .expect(200)
-                        .end( (err, res) => {
-                            if (err) return done(err);
-                            done();
-                        });
+
+        it('Should be allowed to create a new mission after login, with access-token in header.', (done) => {
+            api.post('/api/missions')
+                .set( 'Authorization', 'Bearer ' + token )
+                .send({
+                    "isActive": true,
+                    "isEmergency": true,
+                    "title": "string",
+                    "description": "string",
+                    "dateStart": "2017-05-21T20:25:00.657Z",
+                    "dateEnd": "2017-05-21T20:25:00.657Z",
+                    "meetingPoint": {
+                        "lat": 0,
+                        "lng": 0
+                    },
+                    "meetingPointNicename": "string",
+                    "creator": 1
+                })
+                .expect(200)
+                .end((err, res) => {
+                    if (err) return done(err);
+                    done();
                 });
-        
-        */
+        });
+
+
 
 
     });

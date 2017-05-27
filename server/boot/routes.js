@@ -19,6 +19,11 @@ module.exports = function (app) {
         next();
     });
 
+    app.use(function (req, res, next) {
+        res.removeHeader("X-Powered-By");
+        next();
+    });
+
 
 
 

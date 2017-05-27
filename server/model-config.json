@@ -14,50 +14,50 @@
     ]
   },
   "User": {
-    "dataSource": "mysql",
+    "dataSource": "memory",
     "public": false
   },
   "AccessToken": {
-    "dataSource": "mysql",
+    "dataSource": "memory",
     "public": false
   },
   "ACL": {
-    "dataSource": "mysql",
+    "dataSource": "memory",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "mysql",
+    "dataSource": "memory",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "mysql",
+    "dataSource": "memory",
     "public": false
   },
   "Mission": {
-    "dataSource": "mysql",
+    "dataSource": "memory",
     "public": true
   },
   "Alarm": {
-    "dataSource": "mysql",
+    "dataSource": "memory",
     "public": true
   },
   "MissionResponse": {
-    "dataSource": "mysql",
+    "dataSource": "memory",
     "public": true
   },
   "Expence": {
-    "dataSource": "mysql",
+    "dataSource": "memory",
     "public": true
   },
   "Tracking": {
-    "dataSource": "mysql",
+    "dataSource": "memory",
     "public": true
   },
   "SARUser": {
-    "dataSource": "mysql",
+    "dataSource": "memory",
     "public": true
   },
   "kova": {
@@ -65,7 +65,7 @@
     "public": false
   },
   "AlarmUser": {
-    "dataSource": "mysql",
+    "dataSource": "memory",
     "public": true
   }
 }
