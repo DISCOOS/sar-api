@@ -1,23 +1,4 @@
 {
   "loopback-component-explorer": null,
-  "loopback-component-model-diagram": null,
-  "loopback-component-auto-migrate": {
-    "enabled": true,
-    "raiseError": false,
-    "migration": "auto-migrate",
-    "models": [
-      "Mission",
-      "Alarm",
-      "MissionResponse",
-      "Expence",
-      "Tracking",
-      "SARUser",
-      "AlarmUser",
-      "User",
-      "AccessToken",
-      "ACL",
-      "RoleMapping",
-      "Role"
-    ]
-  }
+  "loopback-component-model-diagram": null
 }
