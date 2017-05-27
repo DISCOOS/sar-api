@@ -20,7 +20,7 @@
   "validations": [],
   "relations": {
     "mission": {
-      "type": "belongsTo",
+      "type": "hasOne",
       "model": "Mission",
       "foreignKey": ""
     },
