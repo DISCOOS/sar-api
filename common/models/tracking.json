@@ -12,12 +12,18 @@
     },
     "geopoint": {
       "type": "geopoint"
+    },
+    "locationNicename": {
+      "type": "string"
+    },
+    "distanceFromMeetingPoint": {
+      "type": "string"
     }
   },
   "validations": [],
   "relations": {
     "alarmresponse": {
-      "type": "hasOne",
+      "type": "belongsTo",
       "model": "MissionReponse",
       "foreignKey": ""
     }
