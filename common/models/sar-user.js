@@ -57,15 +57,18 @@ module.exports = function (Saruser) {
         app.models.kova.persons(cookieToken)
             .then((persons) => {
                 async.forEach(persons, (p, doneFind) => {
-                    Saruser.findOne({ where: { kovaId: p.PrimKey } })
-                        // Found saruser with this kovaId, so user has app
-                        .then((result) => {
-                            result ? (p.hasApp = true) : (p.hasApp = false)
-                            doneFind()
-                        })
-                        .catch((err) => {
-                            doneFind()
-                        })
+                    if (p.PrimKey) {
+                        Saruser.findOne({ where: { kovaId: p.PrimKey } })
+                            // Found saruser with this kovaId, so user has app
+                            .then((result) => {
+                                result ? (p.hasApp = true) : (p.hasApp = false)
+                                doneFind()
+                            })
+                            .catch((err) => {
+                                doneFind()
+                            })
+                    }
+
                 }, (err) => {
                     // iterating done, return
                     cb(null, persons)
