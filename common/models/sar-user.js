@@ -65,6 +65,8 @@ module.exports = function (Saruser) {
                                 doneFind()
                             })
                             .catch((err) => {
+                                console.log(err)
+                                console.log("-----primary key: -------- " + p.PrimKey )
                                 doneFind()
                             })
                     }
