@@ -8,7 +8,7 @@ var async = require('async');
 
 module.exports = function (Saruser) {
 
-  //  Saruser.disableRemoteMethodByName('create', true);				// Removes (POST) /Sarusers
+    Saruser.disableRemoteMethodByName('create', true);				// Removes (POST) /Sarusers
     Saruser.disableRemoteMethodByName('upsert', true);				// Removes (PUT) /Sarusers
     Saruser.disableRemoteMethodByName('deleteById', true);			// Removes (DELETE) /Sarusers/:id
     Saruser.disableRemoteMethodByName("updateAll", true);				// Removes (POST) /Sarusers/update
@@ -113,7 +113,8 @@ module.exports = function (Saruser) {
                                 isTrackable: false,
                                 isAdmin: response.user.privileges & 256 == 256, // Grab priveleges from response
                                 name: response.user.name,
-                                email: response.user.email
+                                email: response.user.email,
+                                expenceId: 0
                             }).
                             then((saruser) => {
                                 // successfully created sar-user
