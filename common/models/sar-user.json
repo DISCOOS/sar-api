@@ -17,25 +17,32 @@
   ],
   "properties": {
     "kovaId": {
-      "type": "string"
+      "type": "string",
+      "required": "true"
     },
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": "true"
     },
     "email": {
-      "type": "string"
+      "type": "string",
+      "required": "true"
     },
     "phone": {
-      "type": "number"
+      "type": "number",
+      "required": "false"
     },
     "isAvailable": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": "true"
     },
     "isTrackable": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": "true"
     },
     "isAdmin": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": "true"
     }
   },
   "validations": [],
@@ -51,7 +58,7 @@
       "foreignKey": "alarmId",
       "through": "AlarmUser"
     },
-    "expences": {
+    "expenses": {
       "type": "hasMany",
       "model": "Expence",
       "foreignKey": ""

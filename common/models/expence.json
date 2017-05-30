@@ -8,13 +8,16 @@
   },
   "properties": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": "true"
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "required": "true"
     },
     "amount": {
-      "type": "number"
+      "type": "number",
+      "required": "true"
     }
   },
   "validations": [],

@@ -8,13 +8,16 @@
   },
   "properties": {
     "response": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": "true"
     },
     "date": {
-      "type": "date"
+      "type": "date",
+      "required": "true"
     },
     "comment": {
-      "type": "string"
+      "type": "string",
+      "required": "false"
     }
   },
   "validations": [],

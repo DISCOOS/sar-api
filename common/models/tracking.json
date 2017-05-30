@@ -8,16 +8,12 @@
   },
   "properties": {
     "date": {
-      "type": "date"
+      "type": "date",
+      "required": "true"
     },
     "geopoint": {
-      "type": "geopoint"
-    },
-    "locationNicename": {
-      "type": "string"
-    },
-    "distanceFromMeetingPoint": {
-      "type": "string"
+      "type": "geopoint",
+      "required": "true"
     }
   },
   "validations": [],
