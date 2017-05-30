@@ -8,7 +8,7 @@ var async = require('async');
 
 module.exports = function (Saruser) {
 
-    Saruser.disableRemoteMethodByName('create', true);				// Removes (POST) /Sarusers
+  //  Saruser.disableRemoteMethodByName('create', true);				// Removes (POST) /Sarusers
     Saruser.disableRemoteMethodByName('upsert', true);				// Removes (PUT) /Sarusers
     Saruser.disableRemoteMethodByName('deleteById', true);			// Removes (DELETE) /Sarusers/:id
     Saruser.disableRemoteMethodByName("updateAll", true);				// Removes (POST) /Sarusers/update
