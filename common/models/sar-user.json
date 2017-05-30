@@ -18,27 +18,27 @@
   "properties": {
     "kovaId": {
       "type": "string",
-      "required": "true"
+      "required": true
     },
     "name": {
       "type": "string",
-      "required": "true"
+      "required": true
     },
     "email": {
       "type": "string",
-      "required": "true"
+      "required": true
     },
     "isAvailable": {
       "type": "boolean",
-      "required": "true"
+      "required": true
     },
     "isTrackable": {
       "type": "boolean",
-      "required": "true"
+      "required": true
     },
     "isAdmin": {
       "type": "boolean",
-      "required": "true"
+      "required": true
     }
   },
   "validations": [],

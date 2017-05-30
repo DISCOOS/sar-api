@@ -9,15 +9,15 @@
   "properties": {
     "response": {
       "type": "boolean",
-      "required": "true"
+      "required": true
     },
     "date": {
       "type": "date",
-      "required": "true"
+      "required": true
     },
     "comment": {
       "type": "string",
-      "required": "false"
+      "required": false
     }
   },
   "validations": [],

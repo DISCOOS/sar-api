@@ -9,11 +9,11 @@
   "properties": {
     "date": {
       "type": "date",
-      "required": "true"
+      "required": true
     },
     "message": {
       "type": "string",
-      "required": "true"
+      "required": true
     }
   },
   "validations": [],

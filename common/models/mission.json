@@ -9,35 +9,35 @@
   "properties": {
     "isActive": {
       "type": "boolean",
-      "required": "true"
+      "required": true
     },
     "isEmergency": {
       "type": "boolean",
-      "required": "true"
+      "required": true
     },
     "title": {
       "type": "string",
-      "required": "true"
+      "required": true
     },
     "description": {
       "type": "string",
-      "required": "true"
+      "required": true
     },
     "dateStart": {
       "type": "date",
-      "required": "true"
+      "required": true
     },
     "dateEnd": {
       "type": "date",
-      "required": "false"
+      "required": false
     },
     "meetingPoint": {
       "type": "geopoint",
-      "required": "true"
+      "required": true
     },
     "meetingPointNicename": {
       "type": "string",
-      "required": "true"
+      "required": true
     }
   },
   "validations": [],

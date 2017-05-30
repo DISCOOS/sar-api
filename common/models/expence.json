@@ -9,15 +9,15 @@
   "properties": {
     "title": {
       "type": "string",
-      "required": "true"
+      "required": true
     },
     "description": {
       "type": "string",
-      "required": "true"
+      "required": true
     },
     "amount": {
       "type": "number",
-      "required": "true"
+      "required": true
     }
   },
   "validations": [],
