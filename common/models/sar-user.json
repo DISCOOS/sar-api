@@ -28,10 +28,6 @@
       "type": "string",
       "required": "true"
     },
-    "phone": {
-      "type": "number",
-      "required": "false"
-    },
     "isAvailable": {
       "type": "boolean",
       "required": "true"
