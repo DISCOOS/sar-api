@@ -5,7 +5,7 @@ module.exports = {
     connector: "postgresql"
   },
   mysql: {
-    url: process.env.MYSQL_URL,
+    url: process.env.CLEARDB_DATABASE_URL,
     name: "mysql",
     connector: "mysql"
   }
