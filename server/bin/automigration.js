@@ -1,6 +1,6 @@
 var app = require('../server');
 
-var dataSource = app.dataSources.postgresql;
+var dataSource = app.dataSources.mysql;
 
 /*
 
