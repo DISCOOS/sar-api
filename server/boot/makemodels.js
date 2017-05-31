@@ -3,10 +3,7 @@
  * Make some example models to fill up the database with some data
  */
 
-/*
 module.exports = function (app) {
-
-
     var Mission = app.models.Mission;
     const mission1 = {
         "isActive": true,
@@ -74,4 +71,3 @@ module.exports = function (app) {
         });
     });
 };
-*/
