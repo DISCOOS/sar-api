@@ -54,10 +54,6 @@ function migrate() {
 		dataSource.disconnect();
 	});
 
-	dataSource.automigrate('User', function (err) {
-		if (err) throw err;
-		dataSource.disconnect();
-	});
 	dataSource.automigrate('AccessToken', function (err) {
 		if (err) throw err;
 		dataSource.disconnect();
