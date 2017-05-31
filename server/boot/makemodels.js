@@ -11,7 +11,7 @@ module.exports = function (app) {
     const mission1 = {
         "isActive": true,
         "isEmergency": true,
-        "title": "Et oppdrag",
+        "title": "En aksjon",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         "dateStart": "2017-05-31T21:01:31.696Z",
         "dateEnd": null,
@@ -26,7 +26,7 @@ module.exports = function (app) {
     const mission2 = {
         "isActive": true,
         "isEmergency": true,
-        "title": "Et annet oppdrag",
+        "title": "En annen aksjon",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         "dateStart": "2017-05-31T21:01:31.696Z",
         "dateEnd": null,
