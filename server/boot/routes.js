@@ -25,6 +25,13 @@ module.exports = function (app) {
     });
 
 
+app.get('/api/missions', function (req, res, next) {
+  console.log("----------get missions---------------")
+  console.log(req)
+  next();
+})
+
+
 
 
 
