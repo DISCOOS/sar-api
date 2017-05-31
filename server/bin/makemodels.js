@@ -41,7 +41,11 @@ module.exports = function (app) {
         mission1,
         mission2
     ], function (err, missions) {
-        if (err) throw err;
+        if (err) {
+            console.log(err)
+            throw err;
+        }
+
 
         console.log('---Created missions----:', missions);
 
@@ -50,7 +54,10 @@ module.exports = function (app) {
             "date": "2017-05-31T21:01:31.723Z",
             "message": "En varsling"
         }, function (err, alarm) {
-            if (err) throw err;
+            if (err) {
+                console.log(err)
+                throw err;
+            }
             console.log('----Created alarm1----', alarm);
         });
 
@@ -59,7 +66,10 @@ module.exports = function (app) {
             "date": "2017-05-31T21:01:31.723Z",
             "message": "En annen varsling"
         }, function (err, alarm) {
-            if (err) throw err;
+            if (err) {
+                console.log(err)
+                throw err;
+            }
             console.log('----Created alarm2----', alarm);
         });
     });
