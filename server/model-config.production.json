@@ -13,6 +13,7 @@
       "./mixins"
     ]
   },
+
   "Mission": {
     "dataSource": "postgresql",
     "public": true
