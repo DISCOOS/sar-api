@@ -3,7 +3,7 @@
  * Make some example models to fill up the database with some data
  */
 
-
+/*
 module.exports = function (app) {
 
 
@@ -74,3 +74,4 @@ module.exports = function (app) {
         });
     });
 };
+*/
