@@ -50,7 +50,7 @@ module.exports = function (app) {
         console.log('---Created missions----:', missions);
 
         // create an alarm for this mission
-        mission[0].alarms.create({
+        missions[0].alarms.create({
             "date": "2017-05-31T21:01:31.723Z",
             "message": "En varsling"
         }, function (err, alarm) {
@@ -62,7 +62,7 @@ module.exports = function (app) {
         });
 
         // create an alarm for this mission
-        mission[1].alarms.create({
+        missions[1].alarms.create({
             "date": "2017-05-31T21:01:31.723Z",
             "message": "En annen varsling"
         }, function (err, alarm) {
