@@ -61,6 +61,11 @@
       "type": "hasMany",
       "model": "Expence",
       "foreignKey": ""
+    },
+    "alarmusers" : {
+      "type": "hasMany",
+      "model": "AlarmUser",
+      "foreignKey": ""
     }
   },
   "acls": [],
