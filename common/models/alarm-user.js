@@ -16,7 +16,6 @@ module.exports = function (Alarmuser) {
                         app.models.Saruser.findById(result.sarUserId)
                             .then(saruser => {
                                 result.sarUser = saruser;
-                                delete result.sarUserId;
                             })
                     }
 
@@ -26,7 +25,6 @@ module.exports = function (Alarmuser) {
                     app.models.Saruser.findById(ctx.esult.sarUserId)
                         .then(saruser => {
                             ctx.result.sarUser = saruser;
-                            delete ctx.result.sarUserId;
                         })
                 }
             }
