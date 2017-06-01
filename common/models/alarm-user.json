@@ -17,11 +17,6 @@
       "type": "belongsTo",
       "model": "Alarm",
       "foreignKey": "alarmId"
-    },
-    "mission": {
-      "type": "hasOne",
-      "model": "Mission",
-      "foreignKey": ""
     }
   },
   "acls": [],
