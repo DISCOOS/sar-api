@@ -1,1 +1,1 @@
-web: NODE_ENV=production DEBUG=*postgresql node .
+web: NODE_ENV=production DEBUG=* node .
