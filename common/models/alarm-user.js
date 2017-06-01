@@ -15,7 +15,7 @@ module.exports = function (Alarmuser) {
             if (Array.isArray(ctx.result)) {
                 ctx.result.forEach(function (result) {
                     if (result.sarUserId) {
-                        app.models.Saruser.findById(result.sarUserId)
+                        app.models.SARUser.findById(result.sarUserId)
                             .then(saruser => {
                                 result.sarUser = saruser;
                             })
@@ -24,7 +24,7 @@ module.exports = function (Alarmuser) {
                 });
             } else {
                 if (ctx.result.sarUserId) {
-                    app.models.Saruser.findById(ctx.esult.sarUserId)
+                    app.models.SARUser.findById(ctx.esult.sarUserId)
                         .then(saruser => {
                             ctx.result.sarUser = saruser;
                         })
