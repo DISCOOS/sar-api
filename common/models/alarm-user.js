@@ -11,10 +11,13 @@ module.exports = function (Alarmuser) {
      */
     
     Alarmuser.afterRemote('find', function (ctx, remoteMethodOutput, next) {
+        
+        console.log(ctx.result)
         if (ctx.result) {
             if (Array.isArray(ctx.result)) {
                 ctx.result.forEach(function (result) {
                     if (result.sarUserId) {
+                        
                         app.models.SARUser.findById(result.sarUserId)
                             .then(saruser => {
                                 result.sarUser = saruser;
