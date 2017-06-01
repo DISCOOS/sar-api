@@ -8,7 +8,8 @@ module.exports = function (Alarmuser) {
     /**
      * Append saruser to alarmuser response
      */
-    Alarmuser.afterRemote('find', function (context, remoteMethodOutput, next) {
+    
+    Alarmuser.afterRemote('find', function (ctx, remoteMethodOutput, next) {
         if (ctx.result) {
             if (Array.isArray(ctx.result)) {
                 ctx.result.forEach(function (result) {
