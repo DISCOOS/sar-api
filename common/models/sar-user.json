@@ -39,6 +39,10 @@
     "isAdmin": {
       "type": "boolean",
       "required": true
+    },
+    "deviceToken": {
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],

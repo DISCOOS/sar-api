@@ -5,6 +5,7 @@
 
 var app = require('../server');
 var Mission = app.models.Mission;
+var AlarmUser = app.models.AlarmUser;
 
 const mission1 = {
     "isActive": true,
@@ -71,3 +72,27 @@ Mission.create([
         console.log('----Created alarm2----', alarm);
     });
 });
+
+
+// Make two alarms for this user
+const alarmuser1 = {
+    "sarUserId": 1,
+    "alarmId": 1,
+    "missionId": 1
+}
+
+
+const alarmuser2 = {
+    "sarUserId": 1,
+    "alarmId": 2,
+    "missionId": 1
+}
+AlarmUser.create([
+    alarmuser1,
+    alarmuser2
+], function (err, missions) {
+    if (err) {
+        console.log(err)
+        throw err;
+    }
+})
