@@ -12,6 +12,7 @@ module.exports = function (Expence) {
             if (result.sARUserId) {
                 app.models.SARUser.findById(result.sARUserId)
                     .then(saruser => {
+                        console.log("found saruser")
                         result.sarUser = saruser;
                         doneFind()
                     })
