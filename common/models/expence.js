@@ -6,24 +6,25 @@ var app = require('../../server/server');
 module.exports = function (Expence) {
 
 
- 
-    
-    Expence.afterRemote('find', function (ctx, remoteMethodOutput, next) {  
+    Expence.afterRemote('find', function (ctx, remoteMethodOutput, next) {
         if (remoteMethodOutput.length == 0) { next(); }
-                ctx.result.forEach(function (result) {
-                    if (result.sARUserId) {
-                        app.models.SARUser.findById(result.sARUserId)
-                            .then(saruser => {
-                                result.sarUser = saruser;
-                                // her må du ha doneFind og async foreach
-                                next();
-                            })
-                    } else {
-                        next();
-                    }
+        async.forEach(ctx.result, (result, doneFind) => {
+            if (result.sARUserId) {
+                app.models.SARUser.findById(result.sARUserId)
+                    .then(saruser => {
+                        result.sarUser = saruser;
+                        doneFind()
+                    })
+                    .catch((err) => {
+                        doneFind()
+                    })
+            } else {
+                return;
+            }
 
-                });
-           
+        }, (err) => {
+        })
+        next();
     });
 
 }
