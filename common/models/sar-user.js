@@ -61,7 +61,13 @@ module.exports = function (Saruser) {
                         Saruser.findOne({ where: { kovaId: p.PrimKey } })
                             // Found saruser with this kovaId, so user has app
                             .then((result) => {
-                                result ? (p.hasApp = true) : (p.hasApp = false)
+                                if(result) {
+                                    p.hasApp = true;
+                                    p.id = result.id;
+                                }
+                                else {
+                                    p.hasApp = false;
+                                }
                                 doneFind()
                             })
                             .catch((err) => {
