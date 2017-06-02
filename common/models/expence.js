@@ -25,7 +25,7 @@ module.exports = function (Expence) {
                 });
             } else {
                 if (ctx.result.sarUserId) {
-                    app.models.SARUser.findById(ctx.esult.sarUserId)
+                    app.models.SARUser.findById(ctx.result.sarUserId)
                         .then(saruser => {
                             ctx.result.sarUser = saruser;
                             next();
