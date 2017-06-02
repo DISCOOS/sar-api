@@ -10,11 +10,9 @@ module.exports = function (Expence) {
     
     Expence.afterRemote('find', function (ctx, remoteMethodOutput, next) {  
         if (!ctx.result) { next(); }
-            if (Array.isArray(ctx.result)) {
                 ctx.result.forEach(function (result) {
                     if (result.sarUserId) {
-                        
-                        app.models.SARUser.findById(result.sarUserId)
+                        app.models.SARUser.findById(result.sARUserId)
                             .then(saruser => {
                                 result.sarUser = saruser;
                                 // her må du ha doneFind og async foreach
@@ -25,17 +23,7 @@ module.exports = function (Expence) {
                     }
 
                 });
-            } else {
-                if (ctx.result.sarUserId) {
-                    app.models.SARUser.findById(ctx.result.sarUserId)
-                        .then(saruser => {
-                            ctx.result.sarUser = saruser;
-                            next();
-                        })
-                } else {
-                    next();
-                }
-            }
+           
     });
 
 }
