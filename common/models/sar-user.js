@@ -51,7 +51,9 @@ module.exports = function (Saruser) {
      */
     Saruser.persons = function (req, cb) {
         // Get cookie from request
-        let cookieToken = req.cookies.access_token;
+        //let cookieToken = req.cookies.access_token;
+        let bearerToken = req.headers.authorization.substr(7);
+
 
         // Call KOVA, pass in cookie
         app.models.kova.persons(cookieToken)
@@ -61,7 +63,7 @@ module.exports = function (Saruser) {
                         Saruser.findOne({ where: { kovaId: p.PrimKey } })
                             // Found saruser with this kovaId, so user has app
                             .then((result) => {
-                                if(result) {
+                                if (result) {
                                     p.hasApp = true;
                                     p.id = result.id;
                                 }
@@ -72,7 +74,7 @@ module.exports = function (Saruser) {
                             })
                             .catch((err) => {
                                 console.log(err)
-                                console.log("-----primary key: -------- " + p.PrimKey )
+                                console.log("-----primary key: -------- " + p.PrimKey)
                                 doneFind()
                             })
                     }
