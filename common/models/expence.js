@@ -9,7 +9,7 @@ module.exports = function (Expence) {
  
     
     Expence.afterRemote('find', function (ctx, remoteMethodOutput, next) {  
-        if (!ctx.result) { next(); }
+        if (remoteMethodOutput.length == 0) { next(); }
                 ctx.result.forEach(function (result) {
                     if (result.sARUserId) {
                         app.models.SARUser.findById(result.sARUserId)
