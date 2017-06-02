@@ -20,6 +20,8 @@ module.exports = function (Expence) {
                                 // her må du ha doneFind og async foreach
                                 next();
                             })
+                    } else {
+                        next();
                     }
 
                 });
@@ -30,6 +32,8 @@ module.exports = function (Expence) {
                             ctx.result.sarUser = saruser;
                             next();
                         })
+                } else {
+                    next();
                 }
             }
     });
