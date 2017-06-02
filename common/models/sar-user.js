@@ -54,9 +54,8 @@ module.exports = function (Saruser) {
         //let cookieToken = req.cookies.access_token;
         let bearerToken = req.headers.authorization.substr(7);
 
-
         // Call KOVA, pass in cookie
-        app.models.kova.persons(cookieToken)
+        app.models.kova.persons(bearerToken)
             .then((persons) => {
                 async.forEach(persons, (p, doneFind) => {
                     if (p.PrimKey) {
