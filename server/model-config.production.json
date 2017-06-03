@@ -67,5 +67,9 @@
   "AlarmUser": {
     "dataSource": "postgresql",
     "public": true
+  },
+  "Attendants": {
+    "dataSource": "postgresql",
+    "public": true
   }
 }

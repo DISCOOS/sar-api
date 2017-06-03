@@ -60,6 +60,10 @@
     "dataSource": "memory",
     "public": true
   },
+  "Attendants": {
+    "dataSource": "memory",
+    "public": true
+  },
   "kova": {
     "dataSource": "kova",
     "public": false
