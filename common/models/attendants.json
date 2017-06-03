@@ -1,0 +1,24 @@
+{
+  "name": "Attendants",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "saruser": {
+      "type": "belongsTo",
+      "model": "SARUser",
+      "foreignKey": "sarUserId"
+    },
+    "mission": {
+      "type": "belongsTo",
+      "model": "Mission",
+      "foreignKey": "missionId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -71,29 +71,30 @@ Mission.create([
         }
         console.log('----Created alarm2----', alarm);
     });
-
-    missions[0].alarmedUsers.create({
-        "sarUserId": 1,
-        "alarmId": 1,
-        "missionId": 1
-    }, function (err, alarmeduser) {
-        if (err) {
-            console.log(err)
-            throw err;
-        }
-        console.log('----Created alarmeduser----', alarmeduser);
-    });
-
-    missions[1].alarmedUsers.create({
-        "sarUserId": 1,
-        "alarmId": 2,
-        "missionId": 1
-    }, function (err, alarmeduser) {
-        if (err) {
-            console.log(err)
-            throw err;
-        }
-        console.log('----Created alarmeduser2----', alarmeduser);
-    });
-
 });
+
+/*
+// Make two alarms for this user
+const alarmuser1 = {
+    "sarUserId": 1,
+    "alarmId": 1,
+    "missionId": 1
+}
+
+
+const alarmuser2 = {
+    "sarUserId": 1,
+    "alarmId": 2,
+    "missionId": 1
+}
+AlarmUser.create([
+    alarmuser1,
+    alarmuser2
+], function (err, missions) {
+    if (err) {
+        console.log(err)
+        throw err;
+    }
+})
+
+*/
