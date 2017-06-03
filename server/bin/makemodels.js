@@ -5,7 +5,7 @@
 
 var app = require('../server');
 var Mission = app.models.Mission;
-var AlarmUser = app.models.AlarmUser;
+var Attendants = app.models.Attendants;
 
 const mission1 = {
     "isActive": true,
@@ -73,28 +73,25 @@ Mission.create([
     });
 });
 
-/*
-// Make two alarms for this user
-const alarmuser1 = {
+
+// Make som attendants for these missions
+const attendant1 = {
     "sarUserId": 1,
-    "alarmId": 1,
     "missionId": 1
 }
 
 
-const alarmuser2 = {
+const attendant2 = {
     "sarUserId": 1,
-    "alarmId": 2,
-    "missionId": 1
+    "missionId": 2
 }
-AlarmUser.create([
-    alarmuser1,
-    alarmuser2
-], function (err, missions) {
+Attendants.create([
+    attendant1,
+    attendant2
+], function (err, attendants) {
     if (err) {
         console.log(err)
         throw err;
     }
 })
 
-*/
