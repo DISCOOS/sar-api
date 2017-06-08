@@ -24,7 +24,8 @@ describe("SAR-API Testsuite", function () {
        //console.log("running something before each test");
     });
 
-    importTest("sar-admin", './sar-admin/test');
+    importTest("", './sar-admin/test');
+    importTest("", './sar-user/test');
 
     after(function () {
         console.log("Finished testing.");

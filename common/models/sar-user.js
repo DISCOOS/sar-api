@@ -65,6 +65,7 @@ module.exports = function (Saruser) {
                                 if (result) {
                                     p.hasApp = true;
                                     p.id = result.id;
+                                    p.isAvailable = result.isAvailable;
                                 }
                                 else {
                                     p.hasApp = false;
