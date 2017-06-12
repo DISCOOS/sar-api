@@ -49,11 +49,6 @@ function migrate() {
 		dataSource.disconnect();
 	});
 
-	dataSource.automigrate('AlarmUser', function (err) {
-		if (err) throw err;
-		dataSource.disconnect();
-	});
-
 	dataSource.automigrate('Attendants', function (err) {
 		if (err) throw err;
 		dataSource.disconnect();

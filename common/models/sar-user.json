@@ -53,12 +53,6 @@
       "model": "Mission",
       "foreignKey": "creator"
     },
-    "alarms": {
-      "type": "hasMany",
-      "model": "Alarm",
-      "foreignKey": "alarmId",
-      "through": "AlarmUser"
-    },
     "expenses": {
       "type": "hasMany",
       "model": "Expence",

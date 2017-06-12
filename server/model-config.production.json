@@ -65,10 +65,6 @@
     "dataSource": "kova",
     "public": false
   },
-  "AlarmUser": {
-    "dataSource": "postgresql",
-    "public": true
-  },
   "Attendants": {
     "dataSource": "postgresql",
     "public": true

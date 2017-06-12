@@ -27,12 +27,6 @@
       "type": "belongsTo",
       "model": "Mission",
       "foreignKey": ""
-    },
-    "persons": {
-      "type": "hasMany",
-      "model": "SARUser",
-      "foreignKey": "alarmId",
-      "through": "AlarmUser"
     }
   },
   "acls": [],

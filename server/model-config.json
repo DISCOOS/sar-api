@@ -68,9 +68,5 @@
   "kova": {
     "dataSource": "kova",
     "public": false
-  },
-  "AlarmUser": {
-    "dataSource": "memory",
-    "public": true
   }
 }
