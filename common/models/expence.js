@@ -7,7 +7,7 @@ module.exports = function (Expence) {
 
 
     Expence.afterRemote('find', function (ctx, remoteMethodOutput, next) {
-        if (remoteMethodOutput.length == 0) { next(); }
+        if (!ctx.result) { next(); }
 
         var newResult = [];
         async.forEach(ctx.result, (result, doneFind) => {
@@ -16,6 +16,8 @@ module.exports = function (Expence) {
                     .then(saruser => {
                         console.log("found saruser")
                         result.sarUser = saruser;
+                        console.log("---result----")
+                        console.log(result)
                         newResult.push(result);
                         doneFind()
                     })
