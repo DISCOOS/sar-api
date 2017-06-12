@@ -23,6 +23,7 @@
     "lodash": "^4.17.4",
     "loopback": "^3.0.0",
     "loopback-boot": "^2.6.5",
+    "loopback-cascade-delete-mixin": "^1.0.1",
     "loopback-component-auto-migrate": "^0.2.7",
     "loopback-component-explorer": "^4.0.0",
     "loopback-component-model-diagram": "^0.3.0",

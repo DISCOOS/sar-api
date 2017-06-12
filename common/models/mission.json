@@ -57,16 +57,25 @@
       "model": "MissionResponse",
       "foreignKey": ""
     },
-    "expenses" : {
+    "expenses": {
       "type": "hasMany",
       "model": "Expence",
       "foreignKey": ""
     },
-    "attendants" : {
+    "attendants": {
       "type": "hasMany",
       "model": "SARUser",
       "foreignKey": "attendingId",
       "through": "Attendants"
+    }
+  },
+  "mixins": {
+    "CascadeDelete": {
+      "relations": [
+        "attendants",
+        "missionresponses",
+        "alarms"
+      ]
     }
   },
   "acls": [],
