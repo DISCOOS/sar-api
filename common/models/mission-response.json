@@ -38,6 +38,13 @@
       "foreignKey": ""
     }
   },
+  "mixins": {
+    "CascadeDelete": {
+      "relations": [
+        "tracking"
+      ]
+    }
+  },
   "acls": [],
   "methods": {}
 }

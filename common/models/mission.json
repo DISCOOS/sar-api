@@ -74,7 +74,8 @@
       "relations": [
         "attendants",
         "missionresponses",
-        "alarms"
+        "alarms",
+        "expenses"
       ]
     }
   },
