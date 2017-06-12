@@ -22,9 +22,7 @@ module.exports = function (Expence) {
                     .catch((err) => {
                         doneFind()
                     })
-            } else {
-                return;
-            }
+            } 
 
         }, (err) => {
         })
