@@ -28,8 +28,12 @@ module.exports = function (Expence) {
 
         }, (err) => {
         })
+        console.log("Assigning new result and next()")
         ctx.result = newResult;
         next();
     });
+
+
+
 
 }
