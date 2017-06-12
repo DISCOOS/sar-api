@@ -24,11 +24,10 @@ module.exports = function (Expence) {
             }
 
         }, (err) => {
-        })
-        doneFind() {
+            console.log("iterating done")
             ctx.result = newResult;
             next();
-        }
+        })
     });
 
 
