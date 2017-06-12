@@ -24,7 +24,7 @@ module.exports = function (Expence) {
             }
 
         }, (err) => {
-            console.log("iterating done")
+            // Done iterating
             ctx.result = newResult;
             next();
         })
