@@ -72,7 +72,6 @@
   "mixins": {
     "CascadeDelete": {
       "relations": [
-        "attendants",
         "missionresponses",
         "alarms",
         "expenses"
