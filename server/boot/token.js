@@ -14,9 +14,9 @@ module.exports = function (app) {
 
 
     // Only use token validation for production
-    //if (process.env.NODE_ENV == 'production')
-       // app.use(bearerTokenValidation(options));
-      //  app.use(helmet());
+    if (process.env.NODE_ENV == 'production')
+        app.use(bearerTokenValidation(options));
+        app.use(helmet());
 
 
 
