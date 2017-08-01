@@ -1,4 +1,4 @@
-# SAR-API
+# SAR-Status-API
 
 REST-API created in Loopback/Express. Run on node-server 
 

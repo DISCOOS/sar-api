@@ -12,7 +12,7 @@ function importTest(name, path) {
 };
 
 
-describe("SAR-API Testsuite", function () {
+describe("SAR Status API Testsuite", function () {
     before(function () {
         //console.log("running something before each test");
         app  = require('../server/server');
@@ -24,8 +24,8 @@ describe("SAR-API Testsuite", function () {
        //console.log("running something before each test");
     });
 
-    importTest("", './sar-admin/test');
-    importTest("", './sar-user/test');
+    importTest("", './sar-status-admin/test');
+    importTest("", './sar-status-personnel/test');
 
     after(function () {
         console.log("Finished testing.");
