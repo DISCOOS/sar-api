@@ -1,5 +1,5 @@
 {
-  "name": "SAR-API",
+  "name": "sar-status-api",
   "version": "1.0.0",
   "main": "server/server.js",
   "engines": {
@@ -50,6 +50,6 @@
     "type": "",
     "url": ""
   },
-  "license": "UNLICENSED",
-  "description": "sar"
+  "license": "BSD 2-clause",
+  "description": "SAR Status Application Programming Interface"
 }
