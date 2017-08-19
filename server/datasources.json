@@ -1,7 +1,8 @@
 {
-  "memory": {
-    "name": "memory",
-    "connector": "memory"
+  "db": {
+    "name": "db",
+    "connector": "memory",
+    "file": "data.json"
   },
   "kova": {
     "name": "kova",

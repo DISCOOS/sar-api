@@ -30,20 +30,6 @@
       "enabled": false
     }
   },
-  "session:before": {
-    "cookie-parser": {
-      "params": "test secret"
-    }
-  },
-  "session": {
-    "cookie-session": {
-      "params": {
-        "secret": "other test secret",
-        "saveUninitialized": true,
-        "resave": true
-      }
-    }
-  },
   "auth": {},
   "parse": {},
   "routes": {

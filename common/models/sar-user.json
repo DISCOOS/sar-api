@@ -1,13 +1,12 @@
 {
   "name": "SARUser",
-  "base": "PersistedModel",
+  "base": "User",
   "idInjection": true,
   "options": {
     "validateUpsert": true,
     "remoting": {
       "sharedMethods": {
         "*": false,
-        "login": true,
         "persons": true
       }
     }
@@ -16,11 +15,11 @@
     "kovaId"
   ],
   "properties": {
-    "kovaId": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "name": {
+    "username": {
       "type": "string",
       "required": true
     },
@@ -44,9 +43,10 @@
       "type": "string",
       "required": false
     }
-    
+
   },
   "validations": [],
+  "automaticValidation": true,
   "relations": {
     "missions": {
       "type": "hasMany",
@@ -63,6 +63,14 @@
       "model" : "Mission",
       "foreignKey": "attendingId",
       "through": "Attendants"
+    },
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "SARAccessToken",
+      "foreignKey": "userId",
+      "options": {
+        "disableInclude": true
+      }
     }
   },
   "acls": [],

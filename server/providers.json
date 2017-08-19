@@ -1,0 +1,13 @@
+{
+  "kova": {
+    "provider": "local",
+    "module": "passport-local",
+    "usernameField": "username",
+    "passwordField": "password",
+    "authPath": "/auth/kova",
+    "successRedirect": false,
+    "failureRedirect": false,
+    "setAccessToken": false,
+    "session": false
+  }
+}

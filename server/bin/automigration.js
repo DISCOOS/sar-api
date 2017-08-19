@@ -1,10 +1,10 @@
 var app = require('../server');
 
-var dataSource = app.dataSources.postgresql;
+var dataSource = app.dataSources.db;
 
 /*
 
-Automigrate all models
+Auto-migrate all models
 
 */
 
