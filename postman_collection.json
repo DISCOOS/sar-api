@@ -1,0 +1,51 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SAR Status",
+		"_postman_id": "b729655f-adbc-34ca-8622-27507e14d065",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/login",
+			"request": {
+				"url": "http://localhost:3000/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"demo2@kova.no\",\n\t\"password\": \"12345678\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/logout",
+			"request": {
+				"url": "http://localhost:3000/logout",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"demo2@kova.no\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
